@@ -2,6 +2,8 @@ version: 1.0
 runtime: dotnet
 build:
   commands:
-    - dotnet publish GameStore.api.csproj -c Release -o out
+    build:
+      - dotnet publish GameStore.api.csproj -c Release -o ./publish
 run:
-  command: dotnet out/GameStore.api.dll
+  command: dotnet GameStore.api.dll
+  working_directory: ./publish
