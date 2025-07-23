@@ -1,0 +1,9 @@
+version: 1.0
+runtime: dotnet6
+build:
+  commands:
+    - dotnet publish -c Release -o ./publish
+run:
+  command: dotnet GameStore.api.dll
+  network:
+    port: 8080
